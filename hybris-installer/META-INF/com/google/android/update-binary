@@ -35,7 +35,7 @@ abort() { ui_print "E$1: $2"; cleanup; exit $1; }
 VERSION="%VERSION_ID%" # e.g. "3.4.0.24"
 TARGET_LOS_VER="%LOS_VER%" # e.g. "16.0"
 TARGET_DEVICE="%DEVICE%" # e.g. "cheeseburger"
-CURRENT_DEVICE=`getprop ro.product.device`
+CURRENT_DEVICE=`getprop ro.omni.device`
 START_SECS=`date +'%s'`
 ROOT="/data/.stowaways/sailfishos"
 FORCE_REINSTALL=0
@@ -195,7 +195,7 @@ else
 	time_string="${elapsed_secs}s"
 fi
 
-# Center the "All done" text
+
 offset=`echo -n $time_string | wc -m 2> /dev/null`
 offset=`expr 52 - 33 - $offset`
 offset=`expr $offset / 2`
