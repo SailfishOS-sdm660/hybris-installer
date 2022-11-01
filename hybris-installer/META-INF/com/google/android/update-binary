@@ -3,7 +3,7 @@
 # https://git.io/fjMH9
 
 # Details about this version:
-#   Device  : %DEVICE%
+#   Device  : %HABUILD_DEVICE%
 #   Release : %VERSION%
 #   Date    : %DATE%
 #   Size    : ~%IMAGE_SIZE%
@@ -34,7 +34,7 @@ abort() { ui_print "E$1: $2"; cleanup; exit $1; }
 # Constants & variables
 VERSION="%VERSION_ID%" # e.g. "3.4.0.24"
 TARGET_LOS_VER="%LOS_VER%" # e.g. "16.0"
-TARGET_DEVICE="%DEVICE%" # e.g. "cheeseburger"
+TARGET_DEVICE="%HABUILD_DEVICE%" # e.g. "cheeseburger"
 CURRENT_DEVICE=`getprop ro.omni.device`
 START_SECS=`date +'%s'`
 ROOT="/data/.stowaways/sailfishos"
